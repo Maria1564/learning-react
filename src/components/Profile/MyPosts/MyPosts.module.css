@@ -1,0 +1,27 @@
+.posts  {
+    /* border: 2px solid grey; */
+    padding: 15px;
+}
+
+h2{
+    margin: 0 auto;
+    width: max-content;
+}
+
+h2::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #62acdd;
+    display: block;
+    top: 6px;
+    position: relative;
+}
+
+.post_add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}

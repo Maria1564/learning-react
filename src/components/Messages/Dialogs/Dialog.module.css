@@ -1,0 +1,17 @@
+.dialogs__item {
+    /* border-bottom: 1px solid gray; */
+    padding: 30px 10px;
+}
+
+.dialogs__item > a {
+    font-weight: bolder;
+
+}
+
+.dialogs__item:has(.active) {
+    background: #c8e2f5;
+}
+
+.dialogs__item:has(.active) a {
+    color: #1f6fa4;
+}

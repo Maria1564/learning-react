@@ -1,0 +1,76 @@
+.nav{
+    grid-area: n;
+    background: #62acdd;
+}
+
+ul {
+    padding: 0;
+    margin-top: 30px;
+}
+
+li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.item{
+    position: relative;
+    padding: 10px;
+    padding-left: 25px;
+}
+
+.item a{
+    color: white;
+    font-size: 20px;
+}
+
+.item a.active_link,
+.item:hover a{
+    color: #7b54b9;
+    font-weight: bold;
+}
+
+.item:has(.active_link),
+.item:hover{
+    background-color: #d1eeffba;
+}
+
+
+.item:has(.active_link)::after,
+.item:hover::after
+ {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #7b54b9;
+    width: 18px;
+    height: 100%;
+}
+
+
+.item:hover a, 
+.item:hover  {
+    transition: all 0.8s;
+}
+
+.friends {
+    margin-top: 40px;
+
+}
+
+.friends_list {
+    display: flex;
+    justify-content: center;
+    gap: 25px 12px;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+
+.title_friends {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white
+}
+

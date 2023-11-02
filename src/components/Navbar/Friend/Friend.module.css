@@ -1,0 +1,17 @@
+.friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.friend_img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.friend > span {
+    color: white;
+}

@@ -1,0 +1,33 @@
+.avatar {
+    border-radius: 20px;
+}
+
+.item {
+    border: 2px solid #62acdd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.item__content {
+   display: flex;
+   align-items: start;
+   gap: 20px;
+}
+.item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.item__content> p{
+    max-width: 800px;
+    padding-right: 50px;
+}
+
+.like {
+    width: max-content;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.like > button  {
+    cursor: pointer;
+}
