@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 
 
 const mapStateToProps = (state) => {
-  console.log(state)
   //возвращает обёкт в виде props  => props:{posts: [...], newPostText: ""}
   return {
     posts: state.profilePage.posts,

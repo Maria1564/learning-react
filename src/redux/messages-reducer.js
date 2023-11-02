@@ -29,13 +29,17 @@ const messagesReducer = (state = initialState, action) => {
         mess: state.newMessageBody,
       };
 
-      state.messages.push(newMessage);
-      state.newMessageBody = "";
-      return state;
+      const copyState = {...state}
+      copyState.messages = [...state.messages]
+      copyState.messages.push(newMessage);
+      copyState.newMessageBody = "";
+      return copyState;
     //Обновление текста при вводе новоого сообщения в чате
-    case UPDATE_NEW_MESSAGE_BODY:
-      state.newMessageBody = action.body;
-      return state;
+    case UPDATE_NEW_MESSAGE_BODY:{
+      const copyState = {...state}
+      copyState.newMessageBody = action.body;
+      return copyState;
+    }
     default:
       return state;
   }

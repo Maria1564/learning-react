@@ -8,9 +8,6 @@ const Dialog = ({ id, name }) => {
   
   let path = `/messages/${id}`;
 
-  useEffect(()=>console.log(`id >> ${id} DID MOUNT`), [])
-  // useEffect(()=>console.log(`id >> ${id}`), [])
-
   return (
     <div className={style.dialogs__item}>
       <NavLink to={path} className={setActive}>
