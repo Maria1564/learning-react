@@ -18,28 +18,25 @@ const initialState = {
 }
 
 const messagesReducer = (state = initialState, action) => {
+
   switch (action.type) {
     //Добавление нового сообщения
     case SEND_MESSAGE:
       const lastItemMessages = state.messages.length - 1;
       const id = state.messages[lastItemMessages].id + 1;
+      console.log(state)
+      return {
+        ...state,
+        messages: [...state.messages, {id, mess: state.newMessageBody}],
+        newMessageBody: ""
+      }
 
-      const newMessage = {
-        id,
-        mess: state.newMessageBody,
-      };
-
-      const copyState = {...state}
-      copyState.messages = [...state.messages]
-      copyState.messages.push(newMessage);
-      copyState.newMessageBody = "";
-      return copyState;
     //Обновление текста при вводе новоого сообщения в чате
-    case UPDATE_NEW_MESSAGE_BODY:{
-      const copyState = {...state}
-      copyState.newMessageBody = action.body;
-      return copyState;
-    }
+    case UPDATE_NEW_MESSAGE_BODY:
+      return {
+        ...state,
+        newMessageBody: action.body
+      }   
     default:
       return state;
   }
