@@ -24,7 +24,6 @@ const messagesReducer = (state = initialState, action) => {
     case SEND_MESSAGE:
       const lastItemMessages = state.messages.length - 1;
       const id = state.messages[lastItemMessages].id + 1;
-      console.log(state)
       return {
         ...state,
         messages: [...state.messages, {id, mess: state.newMessageBody}],

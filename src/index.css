@@ -61,6 +61,7 @@
   }
   img {
     border-style: none;
+    object-fit: cover;
   }
   button,input,optgroup,select,textarea {
     font-family: inherit;

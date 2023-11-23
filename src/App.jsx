@@ -10,17 +10,19 @@ import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 
+
 import { Navigate } from "react-router-dom";
 import MessagesChatContainer from "./components/Messages/MessagesChat/MessagesChatContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
-const App = ({store}) => {
+const App = () => {
   // const [local, setlocal] = useState("")
   // console.log("local >> ", local)
 
   return (
     <div className="app__wrapper">
       <Header />
-      <Navbar sidebar={store.getState().sidebar}/>
+      <Navbar />
 
       <div className="app-wrapper__content">
         <Routes>
@@ -29,10 +31,10 @@ const App = ({store}) => {
             path="/profile"
             element={<Profile/>}
           />
-          {/* <Route  path="/messages" element={<Messages />} /> */}
+       
           <Route
             path="/messages"
-            element={<Messages dialogs={store.getState().messagesPage.dialogs}/>}
+            element={<Messages/>}
           >
             <Route
               path=":id"
@@ -40,11 +42,10 @@ const App = ({store}) => {
             />
           </Route>
           {/* <Route path="/messages/:id" element={<Messages />} /> */}
+          <Route path="/users" element={<UsersContainer/>} /> 
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
-
           <Route path="/music-us" element={<Navigate to="/music" replace />} />
-
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

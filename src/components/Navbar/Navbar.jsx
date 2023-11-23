@@ -8,7 +8,7 @@ const setActive = ({isActive})=>  isActive? style.active_link: ""
 // const setStyle = ({isActive})=>({color: isActive && "gold"}) 
 // если isActive = true то color:"gold"
 
-export const Navbar = ({sidebar}) => {
+export const Navbar = () => {
     
 
 
@@ -30,8 +30,11 @@ export const Navbar = ({sidebar}) => {
             <li className={style.item}>
                 <NavLink className={setActive} to="/settings" >Settings</NavLink>
             </li>
+            <li className={style.item}>
+                <NavLink className={setActive} to="/users" >Find users</NavLink>
+            </li>
         </ul>
-        <div className={style.friends}>
+        {/* <div className={style.friends}>
             <p className={style.title_friends}>Friends</p>
             <div className={style.friends_list}>
             {
@@ -40,7 +43,7 @@ export const Navbar = ({sidebar}) => {
                 ))
             }
             </div>
-        </div>
+        </div> */}
     </nav>
   )
 }

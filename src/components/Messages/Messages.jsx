@@ -3,8 +3,8 @@ import style from "./Messages.module.css";
 import { Outlet } from "react-router-dom";
 import Dialog from "./Dialogs/Dialog";
 
-const Messages = ({dialogs}) => {
-  // const dialogs = useContext(StoreContext).getState().messagesPage.dialogs
+const Messages = () => {
+  const dialogs = store.getState().messagesPage.dialogs
   
   return (
     <div className={style.messages}>
