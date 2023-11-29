@@ -4,7 +4,7 @@ import { AiFillLike } from "react-icons/ai";
 import avatar from "../../../../assets/avatarPost.png";
 
 const Post = ({ message, likesCount }) => {
-  // console.log("Post");
+  console.log("Post");
 
   return (
     <div className={style.item}>
