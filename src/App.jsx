@@ -32,10 +32,7 @@ const App = () => {
             element={<Profile/>}
           />
        
-          <Route
-            path="/messages"
-            element={<Messages/>}
-          >
+          <Route path="/messages" element={<Messages/>}>
             <Route
               path=":id"
               element={<MessagesChatContainer />}

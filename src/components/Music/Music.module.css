@@ -1,0 +1,9 @@
+.bar_content {
+    background-color:#5eb3e88c;
+    width: 100%;
+    max-width: 1138px;
+    position: fixed;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    min-height: 50px;
+}

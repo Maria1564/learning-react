@@ -13,6 +13,7 @@
 .app-wrapper__content {
     grid-area: c;
     background: #c6e8ff;
+    position: relative;
 }
 
 .primary_btn{
