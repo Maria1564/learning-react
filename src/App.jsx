@@ -14,6 +14,7 @@ import Music from "./components/Music/Music";
 import { Navigate } from "react-router-dom";
 import MessagesChatContainer from "./components/Messages/MessagesChat/MessagesChatContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import MusicContainer from "./components/Music/MusicContainer";
 
 const App = () => {
   // const [local, setlocal] = useState("")
@@ -41,7 +42,7 @@ const App = () => {
           {/* <Route path="/messages/:id" element={<Messages />} /> */}
           <Route path="/users" element={<UsersContainer/>} /> 
           <Route path="/news" element={<News />} />
-          <Route path="/music" element={<Music />} />
+          <Route path="/music" element={<MusicContainer />} />
           <Route path="/music-us" element={<Navigate to="/music" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

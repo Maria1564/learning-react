@@ -7,3 +7,37 @@
     backdrop-filter: blur(10px);
     min-height: 50px;
 }
+.music, .music  *{
+    /* border: 1px solid red; */
+
+}
+
+.music {
+    padding: 10px 20px;
+}
+
+
+.music_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+}
+
+.track {
+    /* border: 1px solid blue; */
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.activeTrack {
+    background-color: rgb(157, 164, 219);
+    border: 1px solid rgb(23, 38, 71) ;
+}
+
+.track_time {
+    display: inline-block;
+    width: max-content;
+    margin-left: auto;
+}
