@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import style from "./Music.module.css"
 // import iHeart from "/src/assets/icon_heart.svg"
 // import iHeartActive from "/src/assets/icon_heart_active.svg"
+import iconSound from "/src/assets/sound.svg"
 
 
 const Music = ({tracks, setListMusic, playTrack}) => {
@@ -24,17 +25,20 @@ const Music = ({tracks, setListMusic, playTrack}) => {
     <>
     <div className={style.music}>
       <h2>Music</h2>
-      <a href="">Смотреть все</a>
+      <a href="" className={style.link_all_track}>Смотреть все</a>
       <div className={style.music_list}>
         {tracks?.map((song)=>(
-          <div className={`${style.track} ${song.isPlay ? style.activeTrack: ""}`} key={song.id} onClick={()=>{playTrack(song.id)}}  >
-            <img src={song.imageSong} alt="song" width="55px" height="55px"/>
+          <div className={style.track} key={song.id} onClick={()=>{playTrack(song.id)}}  >
+            <div className={style.sound}>
+              <img src={song.imageSong} alt="song" width="65px" height="65px" className={style.img_song}/>
+              {song.isPlay && <img src={iconSound} alt="song" width="45px" height="45px" className={style.icon_sound}/>}
+            </div>
             <div className="track_wrapper">
               <div>
                 <span>{song.nameSong}</span>
               </div>
               <div>
-                <span className='track_artist'>{song.artist}</span>
+                <span className={style.track_artist}>{song.artist}</span>
               </div>
             </div>
             <span className={style.track_time}>{song.time}</span>

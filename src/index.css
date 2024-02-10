@@ -18,6 +18,9 @@
     font-size: 2em;
     margin: 0.67em 0;
   }
+  h2{
+    font-size: 24px;
+  }
   h2::after {
     content: "";
     width: 100%;
